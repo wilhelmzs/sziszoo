@@ -1,1 +1,562 @@
-SZISZOO TESZT
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SZISZOO</title>
+    <link rel="icon" type="image/png" href="kep/sziszoo-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="SZISZOO.html">
+      <img class="sziszoo1" src="kep/sziszoo-logo.png" width="200" height="100">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      
+      <a href="SZISZOO.html" class="navbar-brand me-3">SZISZOO</a>
+
+      <div class="navbar-nav">
+        <a class="nav-link" href="rolunk.html">Rólunk</a>
+        <a class="nav-link" href="rolunk.html">Házirend</a>
+        <a class="nav-link" href="allatok.html">Állatok</a>
+        <a class="nav-link" href="arak.html">Árak</a>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SZISZOO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .sziszoo1 {
+      -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+    }
+
+    .nav-link{
+      color: #fff;
+      font-weight: 500; 
+      font-size: 20px;   
+      text-decoration: none; 
+    }
+
+    .me-3{
+      color: #fff;
+      font-weight: 500;
+      font-size: 30px;    
+      text-decoration: none; 
+    }
+
+    .navbar{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    
+    .slideshow {
+      width: 100%;
+      height: 930px;
+      position: relative;
+      left: 0px;
+      overflow: hidden;
+      margin: 0px auto; 
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;                
+      transition: opacity 1s ease; 
+      object-fit: cover;
+      -webkit-user-drag: none;
+      user-select: none;
+      pointer-events: none;
+    }
+.slide.active {
+  opacity: 1; 
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow">
+  <img class="slide" src="kep/tigris.jpg">
+  <img class="slide" src="kep/elefant.jpg">
+  <img class="slide" src="kep/medve.jpg">
+  <img class="slide" src="kep/vorospanda.jpg">
+</div>
+
+<script>
+let index = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  index++;
+  if (index > slides.length) {
+    index = 1;
+  }
+
+  slides[index - 1].classList.add("active");
+
+  setTimeout(showSlides, 5000); 
+}
+
+showSlides();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.blackside1 {
+  position: absolute;
+  top: 0px;
+  font-size: 24px;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.menet1 {
+  position: absolute;
+  top: 230px;
+  font-size: 24px;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.panda1 {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.card {
+  position: absolute;
+  top: 1350px;
+  left: 131px;
+  border-radius: 1rem;
+  font-size: 24px;
+  height: 32%;
+}
+
+.card-text {
+  font-size: 15px;
+}
+
+.card-time {
+  position: relative;
+  top: -20px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card-text2 {
+  position: relative;
+  top: -20px;
+  font-size: 15px;
+}
+
+.card-time2 {
+  position: relative;
+  top: -40px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card-title {
+  font-size: 30px;
+  color: forestgreen;
+}
+
+.btn-custom {
+  position: relative;
+  top: -20px;
+  width: 60%;   
+  border-radius: 20px;  
+  margin: 0 auto; 
+  font-size: 1.1rem;
+}
+
+.card2 {
+  position: absolute;
+  top: 1350px;
+  left: 582px;
+  height: 32%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.card2-text {
+  font-size: 15px;
+}
+
+.card2-time {
+  position: relative;
+  top: -20px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card2-text2 {
+  position: relative;
+  top: -20px;
+  font-size: 15px;
+}
+
+.card2-time2 {
+  position: relative;
+  top: -40px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card2-title {
+  font-size: 30px;
+  color: forestgreen;
+}
+
+.no-underline {
+  position: relative;
+  top: -10px;
+  font-size: 20px;
+  text-decoration: none; 
+}
+
+.bold-link {
+  font-weight: 700;    
+  text-decoration: none; 
+  color: #0d6efd;      
+}
+
+.card3 {
+  position: absolute;
+  top: 1350px;
+  left: 1033px;
+  height: 32%;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.card3-text {
+  font-size: 20px;
+}
+
+.card3-tipus {
+  position: relative;
+  top: -20px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card3-text2 {
+  position: relative;
+  top: -20px;
+  font-size: 15px;
+}
+
+.card3-tipus2 {
+  position: relative;
+  top: -40px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card3-title {
+  font-size: 30px;
+  color: forestgreen;
+}
+
+.no-underline2 {
+  position: relative;
+  top: -10px;
+  font-size: 25px;
+  text-decoration: none; 
+}
+
+.bold-link2 {
+  font-weight: 700;    
+  text-decoration: none; 
+  color: #0d6efd;      
+}
+
+.no-underline3 {
+  position: relative;
+  top: 10px;
+  font-size: 20px;
+  text-decoration: none; 
+}
+
+.card4 {
+  position: absolute;
+  top: 1350px;
+  left: 1484px;
+  height: 32%;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.card4-text {
+  font-size: 15px;
+}
+
+.card4-tipus {
+  position: relative;
+  top: -20px;
+  color: forestgreen;
+  font-size: 30px;
+}
+
+.card4-text2 {
+  position: relative;
+  top: -0px;
+  font-size: 15px;
+}
+
+.card4-title {
+  font-size: 30px;
+  color: forestgreen;
+}
+
+.no-underline4 {
+  position: relative;
+  top: -10px;
+  font-size: 30px;
+  text-decoration: none; 
+}
+
+.fw-bold2 {
+  font-weight: 500;    
+  text-decoration: none; 
+  color: #0d6efd;      
+}
+
+.btn-custom2 {
+  position: relative;
+  top: 0px;
+  width: 100%;   
+  border-radius: 20px;  
+  margin: 0 auto; 
+  font-size: 1.1rem;
+}
+
+.btn-custom3 {
+  position: relative;
+  top: 15px;
+  width: 100%;   
+  border-radius: 20px;  
+  margin: 0 auto; 
+  font-size: 1.1rem;
+}
+
+.no-underline5 {
+  position: relative;
+  top: 110px;
+  font-size: 20px;
+  text-decoration: none; 
+}
+
+.fw-bold5 {
+  font-weight: 500;    
+  text-decoration: none; 
+  color: #0d6efd;      
+}
+</style>
+
+    <img class="panda1" src="kep/panda.jpg" alt="panda" width="1905" >
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">🕔 Nyitvatartás</h5>
+    <p class="card-text">Hétfő - Péntek:</p>
+    <h5 class="card-time">08:00 - 18:00</h5>   
+    <p class="card-text2">Szombat - Vasárnap:</p>
+    <h5 class="card-time2">09:00 - 18:30</h5>  
+  </div>
+    <a href="nyitva.html" class="btn btn-success btn-custom">Információk </a>
+</div>
+
+<div class="card2" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card2-title">🎫 Jegyárak</h5>
+    <p class="card2-text">Felnőtt jegy ára:</p>
+    <h5 class="card2-time">5 500 FT</h5>   
+    <p class="card2-text2">Gyermek / Diák:</p>
+    <h5 class="card2-time2">4 000 Ft</h5>  
+  </div>
+    <a href="arak.html" class="card-link no-underline fw-bold">Minden jegyár &#8594</a>
+    <h5></h5>
+    <a href="arak.html" class="card-link no-underline fw-bold" >Fizetési lehetőségek &#8594</a>
+</div>
+
+<div class="card3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card3-title">🛒 Boltok</h5>
+    <p class="card3-text">Ételek</p>
+    <a href="etlapok.html" class="card-link no-underline2 fw-bold2">Étlapok &#8594</a>
+    <p class="card3-text3">Szuvenírek</p>
+    <a href="tipus.html" class="card-link no-underline2 fw-bold2" >Típusai &#8594</a>  
+  </div>
+    <a href="arak.html" class="card-link no-underline3 fw-bold" >Fizetési lehetőségek &#8594</a>
+</div>
+
+<div class="card4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card4-title">🚘 Megközelítés</h5>
+    <a href="kozelites.html" class="btn btn-success btn-custom2">Autóval + Parkolás</a>
+    <a href="kozelites.html" class="btn btn-success btn-custom3">Tömegközlekedéssel</a> 
+  </div>
+  <a href="kozelites.html" class="card-link no-underline5 fw-bold5" >Részletek &#8594</a>
+</div>
+
+<div class="menet1" style="width: 18rem;">
+    <img src="kep/menet.png" alt="menet" width="1905" >
+  </div>
+</div>
+
+<div class="blackside1" style="width: 18rem;">
+    <img src="kep/blackside.png" alt="menet" width="1905" >
+  </div>
+</div>
+
+
+<style>
+.book {
+  position: absolute;
+  top: 1850px;
+  left: 920px;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.gram {
+  position: absolute;
+  top: 1850px;
+  left: 820px;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.tube {
+  position: absolute;
+  top: 1850px;
+  left: 1020px;
+  height: 65px;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.tok {
+  position: absolute;
+  top: 1850px;
+  left: 720px;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.x {
+  position: absolute;
+  top: 1850px;
+  left: 1120px;
+  height: 65px;
+  border-radius: 1rem;
+  font-size: 24px;
+}
+
+.face{
+  width: 50px;
+}
+
+.kov2{
+  position: absolute;
+  top: 1790px;
+  left: 890px;
+  color: #ffffff;
+}
+</style>
+
+<button href="https://www.youtube.com/@SZISZOO" type="button" class="btn btn-success book"> <img class="face" src="kep/facebooklogo.png" alt=""></button>
+
+<button type="button" class="btn btn-success gram"> <img class="face" src="kep/instagramlogo.png" alt=""></button>
+
+<button type="button" class="btn btn-success tube"> <img class="face" src="kep/Youtube_logo.png" alt=""></button>
+
+<button type="button" class="btn btn-success tok"> <img class="face" src="kep/tiktoklogo.png" alt=""></button>
+
+<button type="button" class="btn btn-success x"> <img class="face" src="kep/x_logo.png" alt=""></button>
+
+<div class="kov2" style="width: 18rem;">
+  <h5> Kövess minket!</h5>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+       
+    
+
+
